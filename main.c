@@ -6,7 +6,7 @@
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 11:18:36 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/10 16:16:33 by mteriier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/10 20:20:50 by mteriier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,13 @@ int	main(void)
 	/*================ TEST strchr =================*/
 
 	/*================ TEST strncmp =================*/
-	printf("BSD  : %d\n", strncmp("test\200", "test\0", 6));
-	printf("MINE : %d\n", ft_strncmp("test\200", "test\0", 6));
+	//printf("BSD  : %d\n", strncmp("test\200", "test\0", 6));
+	//printf("MINE : %d\n", ft_strncmp("test\200", "test\0", 6));
 	
 	/*================ TEST strncmp =================*/
+
+	/*================ TEST memcmp =================*/
+	printf("%d\n", memcmp("1234567", "123e567", 7));
+	printf("%d\n", ft_memcmp("1234567", "123e567", 7));
+	/*================ TEST memcmp =================*/
 }
