@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 16:33:57 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/06 16:50:19 by mteriier         ###   ########lyon.fr   */
+/*   Created: 2025/11/06 13:25:17 by mteriier          #+#    #+#             */
+/*   Updated: 2025/11/10 09:43:58 by mteriier         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlen(const char *s)
 {
+	size_t	i;
 
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
