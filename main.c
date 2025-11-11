@@ -6,7 +6,7 @@
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 11:18:36 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/10 20:20:50 by mteriier         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:02:33 by mteriier         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,29 @@ int	main(void)
 	
 	/*================ TEST strncmp =================*/
 
-	/*================ TEST memcmp =================*/
-	printf("%d\n", memcmp("1234567", "123e567", 7));
-	printf("%d\n", ft_memcmp("1234567", "123e567", 7));
-	/*================ TEST memcmp =================*/
+	/*================ TEST strnstr =================*/
+
+	//printf("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "ipsum", 15));
+	//printf("%s\n", ft_strnstr("abc", "abc", 7));
+
+	/*================ TEST strnstr =================*/
+
+	/*================ TEST atoi =================*/
+	printf("%d\n",atoi("    \n -452n54"));
+	printf("%d\n",atoi("    ---45254"));
+	printf("%d\n",atoi("    +45254"));
+	printf("%d\n",atoi("    -  45254"));
+	printf("%d\n",atoi("    ++45254"));
+	printf("%d\n",atoi("    -+45254"));
+	printf("%d\n",atoi("    99223372036854775807"));
+	printf("==========================\n");
+	printf("%d\n",ft_atoi("    \n -452n54"));
+	printf("%d\n",ft_atoi("    ---45254"));
+	printf("%d\n",ft_atoi("    +45254"));
+	printf("%d\n",ft_atoi("    -  45254"));
+	printf("%d\n",ft_atoi("    ++45254"));
+	printf("%d\n",ft_atoi("    -+45254"));
+	printf("%d\n",ft_atoi("    99223372036854775807"));
+	/*================ TEST atoi =================*/
+
 }

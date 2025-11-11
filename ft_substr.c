@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 15:06:02 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/11 10:04:04 by mteriier         ###   ########lyon.fr   */
+/*   Created: 2025/11/11 13:46:41 by mteriier          #+#    #+#             */
+/*   Updated: 2025/11/11 16:02:35 by mteriier         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t		i;
+	size_t	len_s;
+	size_t	i;
+	char	*tmp;
 
-	if (n == 0)
-		return (dest);
-	if (dest > src)
+	len_s = ft_strlen(s);
+	if (len_s < start)
+		len = 0;
+	if (len > len_s - start)
+		len = len_s - start;
+	tmp = malloc((len + 1) * sizeof(char));
+	if (!tmp)
+		return (0);
+	i = 0;
+	while (i < len)
 	{
-		i = n;
-		i--;
-		while (i > 0)
-		{
-			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-			i--;
-		}
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+		tmp[i] = s[start];
+		i++;
+		start++;
 	}
-	else
-		dest = ft_memcpy(dest, src, n);
-	return (dest);
+	tmp[i] = '\0';
+	return (tmp);
 }
