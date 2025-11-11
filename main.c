@@ -6,7 +6,7 @@
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 11:18:36 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/11 16:02:33 by mteriier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/11 20:08:39 by mteriier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	main(void)
 	/*================ TEST strnstr =================*/
 
 	/*================ TEST atoi =================*/
-	printf("%d\n",atoi("    \n -452n54"));
+	/*printf("%d\n",atoi("    \n -452n54"));
 	printf("%d\n",atoi("    ---45254"));
 	printf("%d\n",atoi("    +45254"));
 	printf("%d\n",atoi("    -  45254"));
@@ -80,7 +80,22 @@ int	main(void)
 	printf("%d\n",ft_atoi("    -  45254"));
 	printf("%d\n",ft_atoi("    ++45254"));
 	printf("%d\n",ft_atoi("    -+45254"));
-	printf("%d\n",ft_atoi("    99223372036854775807"));
+	printf("%d\n",ft_atoi("    99223372036854775807"));*/
 	/*================ TEST atoi =================*/
+
+	/*================ TEST SPLIT =================*/
+	char	*s = "aaaaSSSaaaaaaSaaaaaaaSaaaaaSaaaaaSSSS";
+	char	c = 'S';
+	char	**tab;
+	int	i;
+	i = 0;
+	tab = ft_split(s, c);
+	while (tab[i])
+	{
+		printf("%s\n", tab[i]);
+		i++;
+	}
+	/*================ TEST SPLIT =================*/
+
 
 }
