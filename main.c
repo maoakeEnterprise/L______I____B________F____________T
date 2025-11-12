@@ -6,7 +6,7 @@
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 11:18:36 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/11 20:08:39 by mteriier         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:57:12 by mteriier         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int	main(void)
 	printf("%d\n",atoi("    -  45254"));
 	printf("%d\n",atoi("    ++45254"));
 	printf("%d\n",atoi("    -+45254"));
-	printf("%d\n",atoi("    99223372036854775807"));
+	printf("%d\n",atoi("    -99223372036854775807"));
 	printf("==========================\n");
 	printf("%d\n",ft_atoi("    \n -452n54"));
 	printf("%d\n",ft_atoi("    ---45254"));
@@ -80,22 +80,32 @@ int	main(void)
 	printf("%d\n",ft_atoi("    -  45254"));
 	printf("%d\n",ft_atoi("    ++45254"));
 	printf("%d\n",ft_atoi("    -+45254"));
-	printf("%d\n",ft_atoi("    99223372036854775807"));*/
+	printf("%d\n",ft_atoi("    -99223372036854775807"));*/
 	/*================ TEST atoi =================*/
 
-	/*================ TEST SPLIT =================*/
-	char	*s = "aaaaSSSaaaaaaSaaaaaaaSaaaaaSaaaaaSSSS";
-	char	c = 'S';
-	char	**tab;
-	int	i;
-	i = 0;
-	tab = ft_split(s, c);
+	        /*================ TEST SPLIT =================*/
+        /*char    **tab;
+        int     i;
+        i = 0;
+        //tab = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse ", ' ');
+	//tab = ft_split("hello!zzzzzzzz", 'z');
+	//tab = ft_split("      split       this for    me  !       ", ' ');
+	tab = ft_split("Tripouille", ' ');
 	while (tab[i])
-	{
-		printf("%s\n", tab[i]);
-		i++;
-	}
-	/*================ TEST SPLIT =================*/
+        {
+                printf("%s\n", tab[i]);
+                i++;
+        }
+	printf ("%d\n", i);*/
+        /*================ TEST SPLIT =================*/
 
+	/*================ TEST ITOA =================*/
 
+	printf("%s\n",ft_itoa(0));
+	printf("%s\n",ft_itoa(453));
+	printf("%s\n",ft_itoa(-453));
+	printf("%s\n",ft_itoa(-2147483648));
+	printf("%s\n",ft_itoa(-1234));
+
+	/*================ TEST ITOA =================*/
 }

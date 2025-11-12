@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 13:25:17 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/12 11:56:34 by mteriier         ###   ########lyon.fr   */
+/*   Created: 2025/11/12 14:11:30 by mteriier          #+#    #+#             */
+/*   Updated: 2025/11/12 14:28:41 by mteriier         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	size_t	i;
+	t_list	*tmp;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	if (!lst || !f)
+		return ;
+	tmp = lst;
+	while (tmp)
+	{
+		(*f)(tmp->content);
+		tmp = tmp->next;
+	}
 }
