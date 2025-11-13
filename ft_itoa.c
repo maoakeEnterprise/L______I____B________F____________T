@@ -6,13 +6,13 @@
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 08:44:31 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/12 09:55:52 by mteriier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/13 14:59:29 by mteriier         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	len_nb(int n)
+static size_t	len_nb(int n)
 {
 	size_t	i;
 	size_t	add;

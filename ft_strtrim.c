@@ -6,13 +6,13 @@
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 14:13:31 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/11 15:39:52 by mteriier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/13 14:54:51 by mteriier         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isinset(char c, char const *set)
+static int	isinset(char c, char const *set)
 {
 	size_t	i;
 
@@ -26,7 +26,7 @@ int	isinset(char c, char const *set)
 	return (0);
 }
 
-size_t	strlentrim(char const *s1, char const *set)
+static size_t	strlentrim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
@@ -51,6 +51,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*tmp;
 
 	i = 0;
+	if (!s1 || !set)
+		return (0);
 	if (ft_strlen(s1) == 0)
 	{
 		tmp = ft_strdup(s1);

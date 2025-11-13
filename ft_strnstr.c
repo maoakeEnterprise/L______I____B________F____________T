@@ -6,12 +6,11 @@
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 16:15:04 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/12 14:57:17 by mteriier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/13 11:28:24 by mteriier         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

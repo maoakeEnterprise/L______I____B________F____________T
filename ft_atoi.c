@@ -6,21 +6,20 @@
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 09:21:40 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/12 07:58:50 by mteriier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/13 11:17:55 by mteriier         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	calcul_sign(char c)
+static int	calcul_sign(char c)
 {
 	if (c == '-')
 		return (-1);
 	return (1);
 }
 
-long	ft_atoll(const char *nptr)
+static long	ft_atoll(const char *nptr)
 {
 	size_t	i;
 	int		sign;

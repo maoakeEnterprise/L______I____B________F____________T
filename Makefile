@@ -12,7 +12,7 @@ BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_
 
 CC = gcc
 
-CFLAGS = -Werror -Wextra -Wall -I ./
+CFLAGS = -Werror -Wextra -Wall -I.
 
 DEP = $(OBJ:.o=.d)
 
@@ -34,8 +34,6 @@ $(NAME): $(OBJ)
 %.o: %.c
 	$(CC) $(CFLAGS) -MMD -MP -c $< -o $@
 
--include $(DEP) $(DEPBONUS)
-
 clean:
 	rm -rf $(OBJ) $(DEP) $(OBJBONUS) $(DEPBONUS)
 
@@ -44,5 +42,8 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(OBJBONUS) $(OBJ)
-	ar rcs $(NAME) $^
+bonus:
+	$(MAKE) $(NAME) SRC="$(SRC) $(BONUS)"
+
+-include $(DEP)
+

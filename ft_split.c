@@ -6,13 +6,13 @@
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 15:34:04 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/12 09:14:37 by mteriier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/13 14:55:21 by mteriier         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_words(char const *s, char c)
+static size_t	count_words(char const *s, char c)
 {
 	size_t	i;
 	size_t	len;
@@ -36,7 +36,7 @@ size_t	count_words(char const *s, char c)
 	return (len);
 }
 
-size_t	len_word(size_t i, char const *s, char c)
+static size_t	len_word(size_t i, char const *s, char c)
 {
 	size_t	len;
 
@@ -53,7 +53,7 @@ size_t	len_word(size_t i, char const *s, char c)
 	return (len);
 }
 
-void	free_tab(char **tab)
+static void	free_tab(char **tab)
 {
 	int	i;
 

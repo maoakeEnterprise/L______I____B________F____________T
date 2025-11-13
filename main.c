@@ -6,7 +6,7 @@
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 11:18:36 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/12 18:52:21 by mteriier         ###   ########.fr       */
+/*   Updated: 2025/11/13 10:15:13 by mteriier         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,12 +100,12 @@ int	main(void)
         /*================ TEST SPLIT =================*/
 
 	/*================ TEST ITOA =================*/
-	/*
+
 	printf("%s\n",ft_itoa(0));
 	printf("%s\n",ft_itoa(453));
 	printf("%s\n",ft_itoa(-453));
 	printf("%s\n",ft_itoa(-2147483648));
 	printf("%s\n",ft_itoa(-1234));
-	*/
+
 	/*================ TEST ITOA =================*/
 }

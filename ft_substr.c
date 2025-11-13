@@ -6,7 +6,7 @@
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 13:46:41 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/12 08:25:56 by mteriier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/13 13:42:37 by mteriier         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	char	*tmp;
 
+	if (!s)
+		return (0);
 	len_s = ft_strlen(s);
 	if (len_s < start)
 		len = 0;

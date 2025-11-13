@@ -6,7 +6,7 @@
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 10:02:16 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/12 11:31:55 by mteriier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/13 13:51:49 by mteriier         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 	char	*str;
 
+	if (!s || !f)
+		return (0);
 	str = malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!str)
 		return (0);
