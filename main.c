@@ -6,7 +6,7 @@
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 11:18:36 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/13 10:15:13 by mteriier         ###   ########lyon.fr   */
+/*   Updated: 2025/11/13 20:50:40 by mteriier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,26 @@
 
 int	main(void)
 {
-	/*================ TEST strlcpy =================*/
+	/*================ TEST memset =================*/
+	/*char	charmemset[5];
+	ft_memset(memset, 97, 5);
+	printf("%s\n", charmemset);*/
+	/*================ TEST memset =================*/
+
+	/*================ TEST memcpy =================*/
+	/*char	origin[5] = "test\0";
+	char	copy[5] = "tutu\0";
+	ft_memcpy(copy, origin, 5);*/
+	/*================ TEST memcpy =================*/
+
+	/*================ TEST memmove =================*/
+	/*char	chevauchage[5] = "12345";
+
+	ft_memmove(chevauchage, chevauchage + 2, 5);
+	ft_memmove(chevauchage, chevauchage - 2, 5);*/
+	/*================ TEST memmove =================*/
+	
+	/*================ TEST strlcpycat =================*/
 	/*char	dst[15]= "rrrrrr";
 	char	dst1[15]= "rrrrrr";
 	dst[14] = 'a';
@@ -28,7 +47,7 @@ int	main(void)
 		printf("BSD : %zu, %s\n", strlcat(dst, src, atoi(argv[1])), dst);
 		printf("MINE : %zu, %s\n", ft_strlcat(dst1, src, atoi(argv[1])), dst1);
 	}*/
-	/*================ TEST strlcpy =================*/
+	/*================ TEST strlcpycat =================*/
 
 	/*================ TEST strchr =================*/
 	/*
@@ -83,7 +102,35 @@ int	main(void)
 	printf("%d\n",ft_atoi("    -99223372036854775807"));*/
 	/*================ TEST atoi =================*/
 
-	        /*================ TEST SPLIT =================*/
+	/*================ TEST strnstr =================*/
+	/*char 	*big = "aaaaaavvvbbbbbb";
+	char	*little = "vv";
+	printf("%s\n", ft_strnstr(big, little, 25));*/
+	/*================ TEST strnstr =================*/
+
+	/*================ TEST strdup =================*/
+	//printf("%s\n", ft_strdup("mytest"));
+	/*================ TEST strdup =================*/
+
+ 	/*================ TEST substr =================*/
+
+	//printf("%s\n", ft_substr("mytes5tisbig?iguess?", 5, 6))
+
+	/*================ TEST substr =================*/
+
+	/*================ TEST strjoin  =================*/
+
+	//printf("%s\n", ft_strjoin("Hello ", "World"));
+
+	/*================ TEST strjoin =================*/
+ 
+	/*================ TEST strtrim =================*/
+
+	//printf("%s\n", ft_strtrim("aaHelloWorldbbaa", "ab"));
+
+	/*================ TEST strtrim =================*/
+ 
+	/*================ TEST SPLIT =================*/
         /*char    **tab;
         int     i;
         i = 0;
@@ -101,11 +148,43 @@ int	main(void)
 
 	/*================ TEST ITOA =================*/
 
-	printf("%s\n",ft_itoa(0));
+	/*printf("%s\n",ft_itoa(0));
 	printf("%s\n",ft_itoa(453));
 	printf("%s\n",ft_itoa(-453));
 	printf("%s\n",ft_itoa(-2147483648));
-	printf("%s\n",ft_itoa(-1234));
+	printf("%s\n",ft_itoa(-1234));*/
 
 	/*================ TEST ITOA =================*/
+
+	/*================ TEST lstbonus =================*/
+
+	/*t_list	*liste;
+	t_list	*newfront;
+	t_list	*traveler;
+	t_list	*newlast;
+	t_list	*last;
+	char	stock[5];
+	char	*content = "test1";
+	char	*content2 = "test2";
+	char	*content3 = "test3";
+
+	liste = ft_lstnew(content);
+	newfront = ft_lstnew(content2);
+	newlast = ft_lstnew(content3);
+	ft_lstadd_front(&liste, newfront);
+	ft_lstadd_back(&newfront, newlast);
+	traveler = newfront;
+	while (traveler)
+	{
+		ft_memcpy(stock, traveler->content, 5);
+		printf("%s\n",stock);
+		traveler = traveler->next;
+	}
+	printf("size %d\n", ft_lstsize(newfront));
+	last = ft_lstlast(newfront);
+	ft_memcpy(stock, last->content, 5);
+	printf("%s\n", stock);
+	*/
+	/*================ TEST lstbonus =================*/
+ 
 }
