@@ -6,7 +6,7 @@
 /*   By: mteriier <mteriier@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 11:18:36 by mteriier          #+#    #+#             */
-/*   Updated: 2025/11/13 20:50:40 by mteriier         ###   ########.fr       */
+/*   Updated: 2025/11/14 10:41:51 by mteriier         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,28 @@
 //#include <bsd/string.h>
 #include <string.h>
 
+void	*f(void *a)
+{
+	return ("abc");
+}
+
+void	del(void *c)
+{
+	free(c);
+}
+
 int	main(void)
 {
+	/*=============== TEST IS ======================*/
+
+	/*printf("isalpha \n", ft_isalpha('e'));
+	printf("isdigit \n", ft_isdigit('1' ));
+	printf("isalnum \n", ft_isalnum('2'));
+	printf("isascii \n", ft_isascii('w'));
+	printf("isprint \n", ft_isprint('q'));*/
+
+	/*=============== TEST IS ======================*/
+
 	/*================ TEST memset =================*/
 	/*char	charmemset[5];
 	ft_memset(memset, 97, 5);
@@ -158,12 +178,11 @@ int	main(void)
 
 	/*================ TEST lstbonus =================*/
 
-	/*t_list	*liste;
+	t_list	*liste;
 	t_list	*newfront;
 	t_list	*traveler;
 	t_list	*newlast;
 	t_list	*last;
-	char	stock[5];
 	char	*content = "test1";
 	char	*content2 = "test2";
 	char	*content3 = "test3";
@@ -176,15 +195,17 @@ int	main(void)
 	traveler = newfront;
 	while (traveler)
 	{
-		ft_memcpy(stock, traveler->content, 5);
-		printf("%s\n",stock);
+		printf("%s\n",(char *)traveler->content);
 		traveler = traveler->next;
 	}
-	printf("size %d\n", ft_lstsize(newfront));
 	last = ft_lstlast(newfront);
-	ft_memcpy(stock, last->content, 5);
-	printf("%s\n", stock);
-	*/
+	printf("last  %s\n", (char *)last->content);
+	traveler = ft_lstmap(newfront, &f, &del);
+	while (traveler)
+	{	
+		printf("%s\n",(char *)traveler->content);
+		traveler = traveler->next;
+	}	
 	/*================ TEST lstbonus =================*/
  
 }
